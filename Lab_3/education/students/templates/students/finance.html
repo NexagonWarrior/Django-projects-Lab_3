@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>finance</title>
+</head>
+<body>
+    <h2>Фінансовий звіт</h2>
+{% for group, students, group_total in report %}
+    <h3>Група {{ group }}</h3>
+    <table border="1">
+        <tr><th>Студент</th><th>Розмір виплат, грн</th></tr>
+        {% for student in students %}
+            <tr><td>{{ student.name }}</td><td>{{ student.scholarship }}</td></tr>
+        {% endfor %}
+        <tr><td><strong>Загальна сума</strong></td><td>{{ group_total }}</td></tr>
+    </table>
+{% endfor %}
+<h3>Загальна сума витрат: {{ total }}</h3>
+
+</body>
+</html>

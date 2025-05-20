@@ -1,0 +1,25 @@
+<h2>Група {{ group }}</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Ім'я</th>
+            <th>Оцінка 1</th>
+            <th>Оцінка 2</th>
+            <th>Оцінка 3</th>
+            <th>Оцінка 4</th>
+            <th>Оцінка 5</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.grade1 }}</td>
+            <td>{{ student.grade2 }}</td>
+            <td>{{ student.grade3 }}</td>
+            <td>{{ student.grade4 }}</td>
+            <td>{{ student.grade5 }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
